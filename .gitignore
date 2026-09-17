@@ -19,3 +19,6 @@ Thumbs.db
 
 # Server logs
 server.log
+
+# Git setup script (não precisa no GitHub)
+setup-git.sh
