@@ -1,112 +1,44 @@
-# [HEX]CRAFT Landing Page
+# [HEX]CRAFT
 
-Uma landing page moderna e interativa para a marca **[HEX]CRAFT** - onde tecnologia encontra magia.
+Homepage experimental para a marca-estúdio [HEX]CRAFT: um laboratório de objetos, arte, código e ideias que não cabem no molde.
 
-## 🚀 Como Visualizar
+## Arquitetura
 
-1. **Servidor Local (Recomendado)**
-   ```bash
-   cd hexcraft-landing
-   python3 -m http.server 8080
-   ```
-   Acesse: http://localhost:8080
+O projeto é um site estático sem framework, build ou backend. Isso deixa cada camada visível para estudo e funciona muito bem em hospedagem compartilhada:
 
-2. **Abrir Diretamente**
-   - Abra o arquivo `index.html` no seu navegador
-
-## 📁 Estrutura do Projeto
-
-```
-hexcraft-landing/
-├── index.html          # Página principal
-├── css/
-│   └── style.css       # Estilos e animações
-├── js/
-│   └── script.js       # Interatividade e efeitos
-├── images/             # Pasta para imagens (vazia por enquanto)
-└── assets/             # Recursos extras
+```text
+index.html       # homepage
+manifesto.html   # página editorial
+css/base.css     # tokens, navegação, acessibilidade e rodapé
+css/home.css     # composição visual da homepage
+css/style.css    # estilos da página do manifesto
+js/main.js       # menu, navegação, foco e reveal
+js/effects.js    # efeito visual opcional do hero
+assets/favicon.svg
+.htaccess        # HTTPS, headers e bloqueios Apache
 ```
 
-## ✨ Funcionalidades
+## Como estudar localmente
 
-### 🎨 Design
-- **Tema Tech + Magia**: Cores neon (ciano/magenta) com fundo escuro
-- **Gradientes**: Transições suaves de cor
-- **Animações CSS**: Rotação, pulsação e brilho
-- **Responsivo**: Funciona em desktop, tablet e mobile
+Para visualizar a versão estática:
 
-### 🖱️ Interatividade JavaScript
-- **Navegação Suave**: Scroll animado entre seções
-- **Efeito Paralaxe**: Elementos se movem em velocidades diferentes
-- **Partículas Mágicas**: Efeito visual flutuante
-- **Cursor Mágico**: Rastro colorido que segue o mouse
-- **Validação de Formulário**: Verifica dados antes do envio
-- **Animações de Aparição**: Elementos surgem quando ficam visíveis
-
-### 📱 Responsividade
-- **Mobile-First**: Otimizado para dispositivos móveis
-- **Breakpoints**: 768px e 480px
-- **Menu Responsivo**: Hamburger menu em telas pequenas
-- **Imagens Flexíveis**: Se adaptam ao tamanho da tela
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**: Estrutura semântica
-- **CSS3**: Estilos modernos com Flexbox, Grid e animações
-- **JavaScript ES6**: Interatividade e efeitos visuais
-- **Google Fonts**: Tipografia (Orbitron + Inter)
-
-## 🎯 Seções da Página
-
-1. **Header**: Navegação fixa no topo
-2. **Hero**: Seção principal com título animado
-3. **About**: Sobre a marca e características
-4. **Services**: Serviços oferecidos
-5. **Contact**: Formulário de contato
-6. **Footer**: Informações finais
-
-## 🔧 Personalização
-
-### Cores (Variáveis CSS)
-```css
---primary-purple: #6a0dad;
---accent-cyan: #00ffff;
---accent-pink: #ff00ff;
+```bash
+python3 -m http.server 8080
 ```
 
-### Fontes
-- **Orbitron**: Títulos e elementos tech
-- **Inter**: Texto do corpo
+Abra `http://localhost:8080`.
 
-## 📋 Checklist de Teste
+O contato é feito pelo link `mailto:contato@hexcraft.com.br`; o site não armazena nem processa mensagens.
 
-- [x] ✅ Responsividade em diferentes telas
-- [x] ✅ Navegação suave funcionando
-- [x] ✅ Animações CSS executando
-- [x] ✅ JavaScript sem erros no console
-- [x] ✅ Formulário com validação
-- [x] ✅ Efeitos visuais (partículas, cursor)
-- [x] ✅ Compatibilidade com navegadores modernos
+## Publicação
 
-## 🌟 Próximos Passos
+1. Envie `index.html`, `manifesto.html`, `.htaccess`, `robots.txt`, `sitemap.xml`, `assets/`, `css/` e `js/` para `public_html`.
+2. Crie `contato@hexcraft.com.br` na HostGator.
+3. Ative e teste HTTPS.
+4. Abra o endereço de e-mail na seção **Abrir portal**.
 
-1. **Imagens**: Adicionar logo e fotos da equipe
-2. **Conteúdo**: Personalizar textos específicos
-3. **Backend**: Conectar formulário a um servidor
-4. **SEO**: Adicionar meta tags e otimizações
-5. **Analytics**: Implementar Google Analytics
-6. **Deploy**: Hospedar em serviço como Netlify ou Vercel
+O passo a passo completo está em `HOSTGATOR-DEPLOY.md`.
 
-## 🎓 Conceitos Aprendidos
+## Segurança
 
-Este projeto é excelente para aprender:
-- Estrutura HTML semântica
-- CSS moderno (Grid, Flexbox, animações)
-- JavaScript para DOM manipulation
-- Responsive Design
-- UX/UI Design
-- Versionamento com Git
-
----
-
-**Criado com 💜 e um toque de magia**
+Como não existe backend nem coleta de dados, a superfície de ataque é menor: não há sessão, banco de dados, endpoint de formulário, credenciais ou envio automático de e-mail. O `.htaccess` força HTTPS, bloqueia listagem de diretórios e adiciona headers de segurança.

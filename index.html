@@ -3,126 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[HEX]CRAFT - Tech & Magia</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#090b12">
+    <meta name="description" content="[HEX]CRAFT é um estúdio-laboratório para ideias estranhas, objetos impossíveis e experiências que misturam código, arte e imaginação.">
+    <meta property="og:title" content="[HEX]CRAFT — Um laboratório para o estranho">
+    <meta property="og:description" content="Objetos, arte e experiências para quem transforma diferença em linguagem.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hexcraft.com.br/">
+    <link rel="canonical" href="https://hexcraft.com.br/">
+    <title>[HEX]CRAFT — Um laboratório para o estranho</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header - Cabeçalho com navegação -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <span class="hex-brackets">[HEX]</span><span class="craft">CRAFT</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
+<body class="home-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <nav class="site-nav container" aria-label="Navegação principal">
+            <a class="brand" href="index.html" aria-label="[HEX]CRAFT — início">
+                <span class="brand-mark" aria-hidden="true">⌬</span>
+                <span><b>[HEX]</b>CRAFT</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu">
+                <span></span><span></span>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#about">A ideia</a></li>
+                <li><a href="#experiments">Experimentos</a></li>
+                <li><a href="manifesto.html">Manifesto</a></li>
+                <li><a class="nav-cta" href="#contact">Invocar projeto <span aria-hidden="true">↗</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section - Seção principal de destaque -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="tech">[HEX]</span><span class="magic">CRAFT</span>
-            </h1>
-            <p class="hero-subtitle">Onde a Tecnologia encontra a Magia</p>
-            <p class="hero-description">
-                Criatividade sem limites através da união perfeita entre inovação tecnológica e arte mágica.
-            </p>
-            <button class="cta-button">Descubra a Magia</button>
-        </div>
-        <div class="hero-visual">
-            <div class="magic-circle">
-                <div class="hex-pattern"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section - Seção sobre nós -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Nossa Essência</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        <strong>[HEX]CRAFT</strong> nasceu da união de duas mentes criativas que acreditam 
-                        que a verdadeira magia acontece quando a tecnologia serve à imaginação.
-                    </p>
-                    <p>
-                        Combinamos código e criatividade, algoritmos e arte, para criar experiências 
-                        que transcendem o comum e tocam o extraordinário.
-                    </p>
-                </div>
-                <div class="about-features">
-                    <div class="feature">
-                        <div class="feature-icon">💻</div>
-                        <h3>Tecnologia</h3>
-                        <p>Soluções inovadoras com as mais modernas tecnologias</p>
+    <main id="main-content">
+        <section class="hero-lab" id="home" aria-labelledby="hero-title">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-noise" aria-hidden="true"></div>
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ESTÚDIO-LABORATÓRIO // ARQUIVO 001</p>
+                    <h1 id="hero-title">Ideias estranhas também <em>merecem</em> matéria.</h1>
+                    <p class="hero-lead">A [HEX]CRAFT transforma curiosidade em objetos, arte e experiências para quem nunca encontrou seu lugar no molde.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#experiments">Explorar o arquivo <span aria-hidden="true">↓</span></a>
+                        <a class="button button-quiet" href="manifesto.html">Ler o manifesto <span aria-hidden="true">↗</span></a>
                     </div>
-                    <div class="feature">
-                        <div class="feature-icon">✨</div>
-                        <h3>Magia</h3>
-                        <p>Criatividade que transforma ideias em realidade</p>
+                    <dl class="hero-facts" aria-label="Sobre o estúdio">
+                        <div><dt>BASE</dt><dd>Curiosidade</dd></div>
+                        <div><dt>MATÉRIA</dt><dd>Código + arte</dd></div>
+                        <div><dt>STATUS</dt><dd>Em expansão</dd></div>
+                    </dl>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <div class="art-label art-label-top">SIGNAL / 001</div>
+                    <div class="orbit orbit-outer"></div>
+                    <div class="orbit orbit-middle"></div>
+                    <div class="orbit orbit-inner"></div>
+                    <div class="artifact">
+                        <div class="artifact-core"></div>
+                        <span class="artifact-glyph glyph-one">✦</span>
+                        <span class="artifact-glyph glyph-two">⌁</span>
+                        <span class="artifact-glyph glyph-three">◈</span>
                     </div>
-                    <div class="feature">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Arte</h3>
-                        <p>Design que emociona e conecta pessoas</p>
+                    <div class="art-crosshair crosshair-one"></div>
+                    <div class="art-crosshair crosshair-two"></div>
+                    <div class="art-label art-label-bottom">H3C4 / AC // 2026</div>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#about"><span aria-hidden="true">↓</span> descer para investigar</a>
+        </section>
+
+        <section class="statement-section" id="about" aria-labelledby="statement-title" data-reveal>
+            <div class="container statement-layout">
+                <p class="section-index">01 / A IDEIA</p>
+                <div class="statement-content">
+                    <h2 id="statement-title">O mundo já tem coisas demais feitas para o padrão.</h2>
+                    <p class="large-copy">Nós criamos a partir do desvio. Da pergunta que não vai embora. Da vontade de pegar uma ideia, desmontá-la e devolver algo que possa existir no mundo.</p>
+                    <a class="inline-link" href="manifesto.html">Conheça os códigos que guiam a gente <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="experiments-section" id="experiments" aria-labelledby="experiments-title">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="section-index">02 / O ARQUIVO</p>
+                    <div>
+                        <h2 id="experiments-title">Experimentos em andamento.</h2>
+                        <p>Algumas formas que a curiosidade encontrou para sair da cabeça.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section - Seção de serviços -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Nossos Encantamentos</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Sites e aplicações web que combinam funcionalidade com experiência mágica</p>
+                <div class="experiment-grid">
+                    <article class="experiment-card experiment-card-featured" data-reveal>
+                        <div class="card-visual visual-object" aria-hidden="true"><span>⌬</span></div>
+                        <div class="card-body">
+                            <p class="card-type">OBJETO / 001</p>
+                            <h3>Artefatos de outro mundo</h3>
+                            <p>Peças para vestir, guardar e carregar a sua estranheza por aí.</p>
+                            <a class="card-link" href="#contact">Quero saber mais <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="experiment-card" data-reveal>
+                        <div class="card-visual visual-code" aria-hidden="true"><span>&lt;?&gt;</span></div>
+                        <div class="card-body">
+                            <p class="card-type">SISTEMA / 002</p>
+                            <h3>Código ritual</h3>
+                            <p>Interfaces, símbolos e experiências digitais com vida própria.</p>
+                            <a class="card-link" href="#contact">Invocar conversa <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="experiment-card" data-reveal>
+                        <div class="card-visual visual-signal" aria-hidden="true"><span>∿</span></div>
+                        <div class="card-body">
+                            <p class="card-type">PESQUISA / 003</p>
+                            <h3>Frequências estranhas</h3>
+                            <p>Ideias em construção, testes e projetos que ainda estão mudando de forma.</p>
+                            <a class="card-link" href="#contact">Acompanhar sinal <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
                 </div>
-                <div class="service-card">
-                    <h3>Design Criativo</h3>
-                    <p>Identidades visuais únicas que capturam a essência da sua marca</p>
+            </div>
+        </section>
+
+        <section class="process-section" aria-labelledby="process-title" data-reveal>
+            <div class="container process-layout">
+                <div>
+                    <p class="section-index">03 / O RITUAL</p>
+                    <h2 id="process-title">Uma ideia aparece. A mente começa a ferver.</h2>
                 </div>
-                <div class="service-card">
-                    <h3>Consultoria Digital</h3>
-                    <p>Estratégias personalizadas para transformar sua presença digital</p>
+                <ol class="process-list">
+                    <li><span>01</span><div><strong>Invocar</strong><p>A pergunta chega e abre uma passagem.</p></div></li>
+                    <li><span>02</span><div><strong>Experimentar</strong><p>Referências colidem. A curiosidade escolhe um caminho.</p></div></li>
+                    <li><span>03</span><div><strong>Materializar</strong><p>O pensamento ganha textura, código, forma e presença.</p></div></li>
+                    <li><span>04</span><div><strong>Compartilhar</strong><p>A criação encontra alguém e começa outra história.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div class="contact-intro" data-reveal>
+                    <p class="section-index">04 / ABRIR PORTAL</p>
+                    <h2 id="contact-title">Tem uma ideia estranha?</h2>
+                    <p>Talvez ela esteja procurando a gente. Conte o que você está imaginando — não precisa chegar pronto.</p>
+                </div>
+                <div class="contact-card" data-reveal>
+                    <p class="contact-card-label">CANAL DIRETO</p>
+                    <a class="email-link" href="mailto:contato@hexcraft.com.br">contato@hexcraft.com.br <span aria-hidden="true">↗</span></a>
+                    <p class="contact-card-note">Clique no endereço para abrir seu aplicativo de e-mail. Se preferir, escreva diretamente para a gente pelo seu cliente de e-mail.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section - Seção de contato -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="contact-subtitle">Pronto para criar algo mágico juntos?</p>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="email" placeholder="Seu Email" required>
-                    <textarea placeholder="Conte-nos sobre seu projeto..." required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer - Rodapé -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 [HEX]CRAFT - Todos os direitos reservados</p>
-            <p>Feito com 💜 e um toque de magia</p>
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <a class="brand" href="#home" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true">⌬</span><span><b>[HEX]</b>CRAFT</span></a>
+            <p>Feito com curiosidade, código e um toque de magia.</p>
+            <p class="footer-code">H3C4 + ARQUEIRA LUNAR / 2026</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/effects.js" defer></script>
 </body>
 </html>
